@@ -15,7 +15,7 @@ export default class App extends Component {
     };
   }
   handleAdd = (newTodoText) => {
-    if (newTodoText.trim() === "") return; // optional validation
+    if (newTodoText.trim() === "") return; 
     this.setState((prevState) => ({
       todos: [...prevState.todos, { text: newTodoText }],
     }));
@@ -30,8 +30,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <span>Todo</span>
-        {/* Pass the todos list and function as props to utilize those in the component for adding and removing */}
+        <span>Todo</span>        
         <Form onAdd={this.handleAdd} />
         <List todos={this.state.todos} onRemove={this.handleRemove} />
       </div>
