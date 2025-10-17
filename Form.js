@@ -15,9 +15,9 @@ export class Form extends Component {
   };
 
   handleSubmit = (e) => {
-  e.preventDefault(); // Prevent page reload
-  this.props.onAdd(this.state.text); // Call parent's add handler with input from this component's state
-  this.setState({ text: '' }); // Clear input after adding
+  e.preventDefault(); 
+  this.props.onAdd(this.state.text); 
+  this.setState({ text: '' }); 
 };
 
 
@@ -31,7 +31,6 @@ export class Form extends Component {
           placeholder="Whats on your mind?"
           required
         />
-        {/* Add onclick event on the button to add the todos */}
         <button onClick={this.handleSubmit}>Add</button>
       </div>
     );
